@@ -1,0 +1,22 @@
+.lpu{
+    width:full;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    display: flex;  
+    justify-content: space-between;
+
+    background-color: blueviolet;
+    height: 30%;
+    font-size: x-large;
+}
+*{
+    margin: 0;
+
+}
+.box{
+    
+    height: 250px;
+    width: 300px;
+    background: red;
+}

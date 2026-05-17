@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black">
+    <div class="flex flex-col space-y-4 items-center justify-center h-screen">
+        <input type="text" placeholder="Enter ur name" id="name" class="border w-[25%] px-4 py-2 text-xl bg-white">
+        <input type="number" placeholder="Enter ur Age" id="age" class="border w-[25%] px-4 py-2 text-xl bg-white">
+        <input type="text" placeholder="Enter ur occupation" id="occupation" class="border w-[25%] px-4 py-2 text-xl bg-white">
+        <input type="text" placeholder="Enter ur salary " id="salary" class="border w-[25%] px-4 py-2 text-xl bg-white">
+        <button class="border bg-slate-300 rounded-lg px-4 py-2 cursor-pointer w-[15%]  " onclick="handle()">Click to Add</button>
+
+    </div>
+    <!-- <button class="border bg-slate-300 rounded-lg px-4 py-2 cursor-pointer  " onclick="{removeLast()}">Click to to remove last</button> -->
+    <script>
+        let data = []
+        function handle(){
+            let name = document.getElementById("name");
+            let age = document.getElementById("age");
+            let occupation = document.getElementById("occupation");
+            let salary = document.getElementById("salary");
+            let arr = {
+                Name: name.value,
+                Age: Number(age.value),
+                Occupation: occupation.value,
+                Salary: Number(salary.value)
+            }
+            data.push(arr);
+            console.log(arr);
+           
+        }
+    </script>
+</body>
+</html>
