@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Card = ({ name, age, status }) => {
-  function toggle(e){
-    if(status == "Online"){
-      status = "Offline"
+  const [currstatus,setcurrstatus] = useState("Online");
+  function toggle(){
+    if(currstatus == "Online"){
+        setcurrstatus("Offline")
     }else{
-      status = "Online"
+      setcurrstatus("Online")
     }
   }
   return (
@@ -17,10 +18,9 @@ const Card = ({ name, age, status }) => {
         <p className='text-zinc-300'>
           Age: {age}
         </p>
-        <p className='text-zinc-300'>
-          Status: {status}
+        <p className={(currstatus === 'Online' ? 'text-green-400' : 'text-red-500')}>
+          Status: {currstatus}
         </p>
-        
         <button className='p-3 bg-blue-600 rounded-xl text-white ' onClick={toggle}>toggle</button>
 
       </div>
